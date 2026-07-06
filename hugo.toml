@@ -26,7 +26,7 @@ mainSections = ["posts"]
   [params.sidebar]
     emoji = "🥜"
     subtitle = "专注AI Agent与知识管理系统的实践者"
-    avatar = "img/avatar.png"
+    avatar = "/img/avatar.png"
 
   [params.article]
     [params.article.license]
