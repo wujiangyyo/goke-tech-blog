@@ -31,7 +31,7 @@ jobs:
       - name: Download PaperMod theme (latest main)
         run: |
           mkdir -p themes/PaperMod
-          curl -sL "https://github.com/adityatelange/hugo-PaperMod/archive/refs/heads/main.tar.gz" | tar -xz --strip-components=1 -C themes/PaperMod/
+          curl -sL "https://github.com/adityatelange/hugo-PaperMod/archive/refs/heads/master.tar.gz" | tar -xz --strip-components=1 -C themes/PaperMod/
           ls -la themes/PaperMod/theme.toml
 
       - name: Install Hugo CLI
