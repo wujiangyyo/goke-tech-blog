@@ -1,6 +1,6 @@
 ---
 title: "手把手搭建个人AI记忆系统：Hermes + Hindsight + GBrain 全栈实践"
-date: 2026-07-06
+date: 2026-07-06T14:00:00+08:00
 draft: false
 tags: ["AI", "记忆系统", "知识管理", "Hermes", "Hindsight", "GBrain", "Embedding"]
 categories: ["技术实践"]
