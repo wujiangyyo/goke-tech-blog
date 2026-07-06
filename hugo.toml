@@ -1,81 +1,85 @@
 baseURL = "https://wujiangyyo.github.io/goke-tech-blog/"
-languageCode = "zh-cn"
+locale = "zh-cn"
 title = "Goke Tech Blog"
-theme = "PaperMod"
+theme = "stack"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
+
+mainSections = ["posts"]
+
 [pagination]
   pagerSize = 10
 
+[permalinks]
+  post = "/p/:slug/"
+  page = "/:slug/"
+
 [params]
-  author = "果壳科技 聂小雨"
+  mainSections = ["posts"]
   description = "分享AI记忆系统、知识管理、自动化运维的实践经验"
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-  hidemeta = false
-  hideSummary = false
-  showtoc = true
-  tocopen = true
-  comments = false
-  ShowLastModified = true
-  DateFormat = "2006-01-02"
+  rssFullContent = true
 
-  [params.homeInfoParams]
-    Title = "👋 你好，欢迎来到果壳科技"
-    Content = """
-我们是果壳科技，专注AI Agent与知识管理系统的实践者。
-这里记录我们的技术探索、踩坑经验和思考。"""
+  [params.footer]
+    since = 2026
 
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/wujiangyyo"
+  [params.sidebar]
+    emoji = "🥜"
+    subtitle = "专注AI Agent与知识管理系统的实践者"
+    avatar = "img/avatar.png"
 
-  [[params.socialIcons]]
-    name = "rss"
-    url = "/index.xml"
+  [params.article]
+    [params.article.license]
+      enabled = true
+      default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
 
-  [params.editPost]
-    URL = "https://github.com/wujiangyyo/goke-tech-blog/edit/main/content"
-    Text = "在 GitHub 上编辑本文"
+  [params.widgets]
+    homepage = [
+      { type = "search" },
+      { type = "archives", params = { limit = 5 } },
+      { type = "categories", params = { limit = 10 } },
+      { type = "tag-cloud", params = { limit = 10 } },
+    ]
+    page = [{ type = "toc" }]
 
-  [params.assets]
-    extraCSS = ["css/custom.css"]
-
-  [params.FuseSettings]
-    isCaseSensitive = false
-    shouldSort = true
-    location = 0
-    distance = 1000
-    threshold = 0.4
-    minMatchCharLength = 0
+  [params.comments]
+    enabled = false
 
 [menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+
   [[menu.main]]
     identifier = "posts"
     name = "📝 文章"
     url = "/posts/"
     weight = 10
+
   [[menu.main]]
     identifier = "archives"
     name = "📚 归档"
     url = "/archives/"
     weight = 20
+
   [[menu.main]]
     identifier = "tags"
     name = "🏷️ 标签"
     url = "/tags/"
     weight = 30
+
   [[menu.main]]
     identifier = "search"
     name = "🔍 搜索"
     url = "/search/"
     weight = 40
+
+[[menu.social]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/wujiangyyo"
+  params = { icon = "brand-github" }
 
 [markup]
   [markup.goldmark]
