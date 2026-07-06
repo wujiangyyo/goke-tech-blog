@@ -1,0 +1,265 @@
+/* ============================================
+   Goke Tech Blog - 自定义美化
+   ============================================ */
+
+/* --- CSS变量 --- */
+:root {
+  --theme-primary: #4f46e5;
+  --theme-primary-light: #818cf8;
+  --theme-primary-dark: #3730a3;
+  --theme-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bg-card: #ffffff;
+  --bg-code: #1e1e2e;
+  --bg-code-inline: #eef2ff;
+  --bg-table-stripe: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --radius-md: 12px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --transition-normal: 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --bg-card: #1e1e2e;
+  --bg-code-inline: #313244;
+  --bg-table-stripe: #262637;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+}
+
+/* --- 内容宽度 --- */
+.post-content {
+  max-width: 860px;
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+/* --- 首页 Hero 美化 --- */
+.home-info {
+  background: linear-gradient(145deg, #f8fafc 0%, #eef2ff 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .home-info {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+  border-color: #333;
+}
+
+/* --- 文章卡片 --- */
+.posts .post-entry {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.2rem;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.posts .post-entry::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--theme-gradient);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.posts .post-entry:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--theme-primary-light);
+}
+
+.posts .post-entry:hover::before {
+  opacity: 1;
+}
+
+.posts .post-entry h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.posts .post-entry:hover h2 {
+  color: var(--theme-primary);
+}
+
+/* --- 代码块 --- */
+:not(pre) > code {
+  background: var(--bg-code-inline);
+  color: var(--theme-primary-dark);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+pre {
+  border-radius: var(--radius-md) !important;
+  padding: 1.5rem !important;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid #313244;
+}
+
+/* --- 表格 --- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+thead {
+  background: var(--theme-gradient);
+}
+
+thead th {
+  color: #fff;
+  font-weight: 600;
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  border: none;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--bg-table-stripe);
+}
+
+tbody tr:hover {
+  background: rgba(79, 70, 229, 0.05);
+}
+
+td {
+  padding: 0.75rem 1.2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- 引用块 --- */
+blockquote {
+  border-left: 4px solid var(--theme-primary);
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(118, 75, 162, 0.05));
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+/* --- 标签芯片 --- */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--bg-code-inline);
+  color: var(--theme-primary);
+  transition: all 0.2s;
+}
+
+.tag:hover {
+  background: var(--theme-primary);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* --- 链接 --- */
+.post-content a {
+  color: var(--theme-primary);
+  border-bottom: 2px solid rgba(79, 70, 229, 0.3);
+  transition: all 0.2s;
+}
+
+.post-content a:hover {
+  color: var(--theme-primary-dark);
+  border-bottom-color: var(--theme-primary);
+}
+
+/* --- 导航栏毛玻璃 --- */
+#header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] #header {
+  background: rgba(30, 30, 46, 0.85) !important;
+}
+
+/* --- 图片 --- */
+.post-content img {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-content img:hover {
+  transform: scale(1.02);
+}
+
+/* --- 滚动条 --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* --- 选中文字 --- */
+::selection {
+  background: rgba(79, 70, 229, 0.2);
+}
+
+/* --- 卡片入场动画 --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.posts .post-entry {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.posts .post-entry:nth-child(1) { animation-delay: 0s; }
+.posts .post-entry:nth-child(2) { animation-delay: 0.1s; }
+.posts .post-entry:nth-child(3) { animation-delay: 0.2s; }
+.posts .post-entry:nth-child(4) { animation-delay: 0.3s; }
+
+/* --- 响应式 --- */
+@media (max-width: 768px) {
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .posts .post-entry {
+    padding: 1.2rem;
+  }
+
+  .home-info {
+    padding: 1.5rem;
+  }
+}
