@@ -1,3 +1,4 @@
+# GitHub Actions 自动部署配置
 name: Deploy Hugo site
 
 on:
@@ -22,17 +23,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.128.0
+      HUGO_VERSION: 0.147.0
     steps:
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo -S -p '' dpkg -i ${{ runner.temp }}/hugo.deb
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Pages
