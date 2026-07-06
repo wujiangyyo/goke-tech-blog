@@ -1,0 +1,44 @@
+baseURL = "https://wujiangyyo.github.io/goke-tech-blog/"
+languageCode = "zh-cn"
+title = "Goke Tech Blog"
+theme = "PaperMod"
+
+[params]
+  author = "果壳科技 聂小雨"
+  description = "AI记忆系统技术分享 - Hermes + Hindsight + GBrain"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = true
+  comments = false
+
+  [params.homeInfoParams]
+    Title = "Goke Tech Blog"
+    Content = "果壳科技技术博客 - 分享AI记忆系统、知识管理、自动化运维的实践经验"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/wujiangyyo"
+
+  [params.editPost]
+    URL = "https://github.com/wujiangyyo/goke-tech-blog/content"
+    Text = "在 GitHub 上编辑本文"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    style = "monokai"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
