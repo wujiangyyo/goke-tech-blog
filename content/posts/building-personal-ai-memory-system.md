@@ -5,8 +5,8 @@ draft: false
 tags: ["AI", "记忆系统", "知识管理", "Hermes", "Hindsight", "GBrain", "Embedding"]
 categories: ["技术实践"]
 author: "果壳科技 聂小雨"
-summary: "从零搭建个人AI记忆系统..."
-image: "/goke-tech-blog/img/featured-hindsight.jpg" "从零搭建个人AI记忆系统的完整指南。我们用Hermes Agent做对话调度，Hindsight存事实记忆，GBrain建知识图谱，再用Qwen3-Embedding-0.6B统一三个系统的向量空间。踩坑无数，全部记录。"
+summary: "从零搭建个人AI记忆系统的完整指南。我们用Hermes Agent做对话调度，Hindsight存事实记忆，GBrain建知识图谱，再用Qwen3-Embedding-0.6B统一三个系统的向量空间。踩坑无数，全部记录。"
+image: "/goke-tech-blog/img/featured-hindsight.jpg"
 ShowToc: true
 TocOpen: true
 ---
