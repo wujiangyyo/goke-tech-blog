@@ -1,6 +1,6 @@
 ---
 title: "Hermes + TiMem 实战：替换 Hindsight，实现时间线记忆与 5 层记忆管理"
-date: 2026-07-06
+date: 2026-07-06T16:00:00+08:00
 draft: false
 tags: ["AI", "记忆系统", "Hermes", "TiMem", "MCP", "Qdrant", "时间线记忆"]
 categories: ["技术实践"]
