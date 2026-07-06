@@ -5,8 +5,8 @@ draft: false
 tags: ["AI", "记忆系统", "Hermes", "TiMem", "MCP", "Qdrant", "时间线记忆"]
 categories: ["技术实践"]
 author: "果壳科技 塔塔"
-summary: "用 TiMem 替换 Hindsight..."
-image: "/goke-tech-blog/img/featured-timem.jpg" "用 TiMem 替换 Hindsight，给 Hermes Agent 换上全新的记忆系统。自写 MCP 服务器、Qdrant 向量库、增量回填 cron，在 J1900 低配机器上跑出 0.8+ 语义搜索精度的实战记录。"
+summary: "用 TiMem 替换 Hindsight，给 Hermes Agent 换上全新的记忆系统。自写 MCP 服务器、Qdrant 向量库、增量回填 cron，在 J1900 低配机器上跑出 0.8+ 语义搜索精度的实战记录。"
+image: "/goke-tech-blog/img/featured-timem.jpg"
 ShowToc: true
 TocOpen: true
 ---
