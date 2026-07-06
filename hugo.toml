@@ -7,6 +7,7 @@ hasCJKLanguage = true
 
 mainSections = ["posts"]
 
+# retry counter: 1
 [pagination]
   pagerSize = 10
 
