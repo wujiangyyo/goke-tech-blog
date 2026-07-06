@@ -2,7 +2,8 @@ baseURL = "https://wujiangyyo.github.io/goke-tech-blog/"
 languageCode = "zh-cn"
 title = "Goke Tech Blog"
 theme = "PaperMod"
-paginate = 10
+[pagination]
+  pagerSize = 10
 
 [params]
   author = "果壳科技 聂小雨"
@@ -77,6 +78,9 @@ paginate = 10
     weight = 40
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     codeFences = true
     lineNos = true
