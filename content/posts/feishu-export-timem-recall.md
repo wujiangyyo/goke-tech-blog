@@ -223,7 +223,7 @@ flowchart LR
     B --> C[凌晨3点自动导出]
     C --> D[TiMem 语义编码]
     D --> E[Qdrant 向量库]
-    F[我问"还记得吗"] --> G[TiMem 语义检索]
+    F[我问\"还记得吗\"] --> G[TiMem 语义检索]
     G --> H[精准命中 ✅]
 ```
 
