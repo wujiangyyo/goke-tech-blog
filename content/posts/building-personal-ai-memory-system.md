@@ -21,55 +21,16 @@ TocOpen: true
 
 我们花了两天时间，搭建了一套完整的个人AI记忆系统。今天把全过程分享出来，包括架构设计、技术选型、部署细节，以及踩过的每一个坑。
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h3 style="margin: 0 0 10px 0; color: white;">📊 核心数据</h3>
-  <div style="display: flex; justify-content: space-around; text-align: center;">
-    <div>
-      <div style="font-size: 2em; font-weight: bold;">3601</div>
-      <div style="font-size: 0.9em; opacity: 0.9;">条记忆</div>
-    </div>
-    <div>
-      <div style="font-size: 2em; font-weight: bold;">1024</div>
-      <div style="font-size: 0.9em; opacity: 0.9;">维向量空间</div>
-    </div>
-    <div>
-      <div style="font-size: 2em; font-weight: bold;">45</div>
-      <div style="font-size: 0.9em; opacity: 0.9;">分钟完成迁移</div>
-    </div>
-    <div>
-      <div style="font-size: 2em; font-weight: bold;">0</div>
-      <div style="font-size: 0.9em; opacity: 0.9;">额外硬件成本</div>
-    </div>
-  </div>
-</div>
+| 指标 | 数值 |
+|------|------|
+| 条记忆 | **3601** |
+| 向量空间维度 | **1024** |
+| 迁移耗时 | **45分钟** |
+| 额外硬件成本 | **0元** |
 
 ## 一、系统架构
 
 ### 1.1 整体设计
-
-```mermaid
-graph TB
-    subgraph "会话与任务层"
-        A[Hermes Agent<br/>对话调度] --> B[Obsidian<br/>笔记沉淀]
-    end
-    
-    subgraph "记忆与知识层"
-        C[Hindsight<br/>事实记忆]
-        D[GBrain<br/>知识图谱]
-    end
-    
-    subgraph "向量计算层"
-        E[Qwen3-Embedding-0.6B<br/>TEI服务 :8082]
-    end
-    
-    A --> C
-    A --> D
-    B --> D
-    C --> E
-    D --> E
-    
-    style E fill:#e1f5fe
-```
 
 三个层次各司其职：
 
@@ -479,22 +440,18 @@ Qwen3对中文的语义理解明显优于之前的英文模型。测试中，搜
 
 ---
 
-<div style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin: 20px 0;">
-
-**关于作者**
-
-🧑‍💻 果壳科技 · 聂小雨
-
-专注AI Agent与知识管理系统的实践者。我们相信，每个人都有权拥有自己的"第二大脑"。
-
-📧 联系我们：[GitHub](https://github.com/wujiangyyo/goke-tech-blog)
-
----
-
-*技术栈：Hermes Agent + Hindsight + GBrain + Qwen3-Embedding-0.6B*
-
-*服务器：Ubuntu 24.04，16核27GB内存*
-
-*完整部署脚本和配置文件见 [GitHub仓库](https://github.com/wujiangyyo/goke-tech-blog)*
-
-</div>
+> **关于作者**
+>
+> 🧑‍💻 果壳科技 · 聂小雨
+>
+> 专注AI Agent与知识管理系统的实践者。我们相信，每个人都有权拥有自己的"第二大脑"。
+>
+> 📧 联系我们：[GitHub](https://github.com/wujiangyyo/goke-tech-blog)
+>
+> ---
+>
+> *技术栈：Hermes Agent + Hindsight + GBrain + Qwen3-Embedding-0.6B*
+>
+> *服务器：Ubuntu 24.04，16核27GB内存*
+>
+> *完整部署脚本和配置文件见 [GitHub仓库](https://github.com/wujiangyyo/goke-tech-blog)*

@@ -25,27 +25,12 @@ TocOpen: true
 
 于是我们开始了第二轮迭代——**用 TiMem（Time-based Memory）替换 Hindsight**，实现真正的时间线感知记忆系统。
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h3 style="margin: 0 0 10px 0; color: white;">📊 本文核心数据</h3>
-  <div style="display: flex; justify-content: space-around; text-align: center;">
-    <div>
-      <div style="font-size: 2em; font-weight: bold;">367</div>
-      <div style="font-size: 0.9em; opacity: 0.9;">条初始记忆</div>
-    </div>
-    <div>
-      <div style="font-size: 2em; font-weight: bold;">26MB</div>
-      <div style="font-size: 0.9em; opacity: 0.9;">对话历史导出</div>
-    </div>
-    <div>
-      <div style="font-size: 2em; font-weight: bold;">0.82</div>
-      <div style="font-size: 0.9em; opacity: 0.9;">语义搜索精度</div>
-    </div>
-    <div>
-      <div style="font-size: 2em; font-weight: bold;">50MB</div>
-      <div style="font-size: 0.9em; opacity: 0.9;">J1900 内存占用</div>
-    </div>
-  </div>
-</div>
+| 指标 | 数值 |
+|------|------|
+| 条初始记忆 | **367** |
+| 对话历史导出 | **26MB** |
+| 语义搜索精度 | **0.82** |
+| J1900 内存占用 | **50MB** |
 
 ## 一、为什么换掉 Hindsight？
 
@@ -227,7 +212,7 @@ J1900（4 核 8GB）跑全套记忆系统毫无压力，还有 7.5GB 剩余给 J
 
 ---
 
-<div style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin: 20px 0;">
+---
 
 **关于作者**
 
@@ -241,4 +226,4 @@ J1900（4 核 8GB）跑全套记忆系统毫无压力，还有 7.5GB 剩余给 J
 
 > 所有配置文件和代码见 [GitHub 仓库](https://github.com/wujiangyyo/goke-tech-blog)
 
-</div>
+

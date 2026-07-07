@@ -217,15 +217,9 @@ python3 /home/yyo/.hermes/skills/communication/feishu-messaging/scripts/feishu_e
 
 ### 核心价值
 
-```mermaid
-flowchart LR
-    A[对话发生] --> B[飞书服务器永久保存]
-    B --> C[凌晨3点自动导出]
-    C --> D[TiMem 语义编码]
-    D --> E[Qdrant 向量库]
-    F[我问「还记得吗」] --> G[TiMem 语义检索]
-    G --> H[精准命中]
-```
+对话发生 → 飞书服务器永久保存 → 凌晨3点自动导出 → TiMem 语义编码 → Qdrant 向量库
+
+我问「还记得吗」→ TiMem 语义检索 → 精准命中
 
 这套系统解决的核心矛盾是：
 
