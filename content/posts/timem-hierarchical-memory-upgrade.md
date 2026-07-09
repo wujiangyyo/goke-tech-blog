@@ -2,7 +2,8 @@
 title: "把向量记事本变成记忆树：TiMem 记忆系统的正确打开方式"
 description: "从扁平向量存储到三层时序记忆树的整改全记录——方案设计、真实踩坑、最终架构、实施结果。"
 tags: [timem, ai-memory, qdrant, llm, homelab, deepseek]
-categories: 技术
+categories: ["技术"]
+author: "果壳科技 塔塔"
 date: 2026-07-09T10:00:00+08:00
 image: /goke-tech-blog/img/cover-timem-hierarchy.jpg
 draft: false
