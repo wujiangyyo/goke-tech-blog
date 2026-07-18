@@ -6,6 +6,7 @@ tags: ["Electron", "桌面宠", "Codex", "Windows", "CSS动画", "透明窗口"]
 categories: ["技术实践"]
 author: "果壳科技 聂小雨"
 summary: "把 Codex 平台的 V2 桌宠玄骨改造成独立 Windows 透明桌面宠，纯原生体验，不依赖 Codex。途中踩了透明窗口闪烁、拖动背景扩大、视线追踪标定等一堆坑。"
+image: "/goke-tech-blog/img/xuangu-pet-cover.jpg"
 ShowToc: true
 TocOpen: true
 ---
