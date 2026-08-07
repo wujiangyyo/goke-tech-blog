@@ -4,7 +4,7 @@ description: "2019 年小米云台摄像头（chuangmi.camera.ipc019）纯云零
 tags: [xiaomi, camera, rtsp, miloco, micam, go2rtc, homelab, iot]
 categories: ["技术"]
 author: "果壳科技 塔塔"
-date: 2026-08-08T10:00:00+08:00
+date: 2026-08-08T02:50:00+08:00
 draft: false
 weight: 4
 image: /goke-tech-blog/img/cover-miloco-camera.jpg
