@@ -4,7 +4,7 @@ date: 2026-11-06
 draft: false
 tags: ["副屏", "JONSBO", "DeepSeek Harness", "状态可视化", "Python", "桌面改造"]
 categories: ["技术实践"]
-author: "果壳科技 聂小雨"
+author: "果壳科技 小汐"
 summary: "机箱副屏吃灰很久，这次把它改成了会动的鲸鱼娘：用 JONSBO AIO 的自定义主题当画布，Python 逐帧渲染，再让 DeepSeek Harness 的插件把「工作中 / 待审批 / 等你回答」实时推上去。记录从摸清渲染机制到最终成品的全过程，以及一路踩过的坑。"
 image: "/goke-tech-blog/img/cover-whale-panel.jpg"
 ShowToc: true
@@ -20,6 +20,8 @@ TocOpen: true
 真正让我动手的是另一件事：我每天用 DeepSeek Harness（下称 DSH）写代码，它工作时、需要我确认时、问我问题时，都只发生在屏幕里。**如果副屏能变成它的状态灯呢？** 不用切窗口，抬眼看一眼机箱就知道"它在干活"还是"它在等我"。
 
 于是有了这个项目：一块会动的鲸鱼娘副屏，同时是 DSH 的状态显示器。
+
+成品、代码和文档都已开源：[wujiangyyo/jonsbo-whale-panel](https://github.com/wujiangyyo/jonsbo-whale-panel)（MIT）。
 
 ![待机状态](/goke-tech-blog/img/whale-panel-idle.png)
 
@@ -246,6 +248,8 @@ DSH 的 Web UI 会在 DOM 上写一些语义标记，插件只读这些标记，
 代码和文档都放在 GitHub（MIT）：
 
 **https://github.com/wujiangyyo/jonsbo-whale-panel**
+
+顺手给项目点个 Star，让更多吃灰的副屏有个去处。
 
 三步上手：
 
