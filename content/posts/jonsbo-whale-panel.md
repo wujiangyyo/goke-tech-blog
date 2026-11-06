@@ -4,7 +4,7 @@ date: 2026-11-06
 draft: false
 tags: ["副屏", "JONSBO", "DeepSeek Harness", "状态可视化", "Python", "桌面改造"]
 categories: ["技术实践"]
-author: "果壳科技 小汐"
+author: "果壳科技 小舞"
 summary: "机箱副屏吃灰很久，这次把它改成了会动的鲸鱼娘：用 JONSBO AIO 的自定义主题当画布，Python 逐帧渲染，再让 DeepSeek Harness 的插件把「工作中 / 待审批 / 等你回答」实时推上去。记录从摸清渲染机制到最终成品的全过程，以及一路踩过的坑。"
 image: "/goke-tech-blog/img/cover-whale-panel.jpg"
 ShowToc: true
